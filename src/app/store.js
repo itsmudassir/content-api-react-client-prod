@@ -43,6 +43,10 @@ export const store = configureStore({
     //         },
 
     //     }).concat([middlewareLogger, contentApi.middleware]),
+
+    middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware().concat(contentApi.middleware)
+
 });
 
 export let persistor = persistStore(store);
