@@ -31,18 +31,18 @@ const middlewareLogger = !!isDev ? logger : [];
 
 export const store = configureStore({
     reducer: {
-        // posts:postsReducer,
+        posts:postsReducer,
         [contentApi.reducerPath]: contentApi.reducer,
         persistedReducer
     },
 
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
-            serializableCheck: {
-                ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-            },
+    // middleware: (getDefaultMiddleware) =>
+    //     getDefaultMiddleware({
+    //         serializableCheck: {
+    //             ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+    //         },
 
-        }).concat([middlewareLogger, contentApi.middleware]),
+    //     }).concat([middlewareLogger, contentApi.middleware]),
 });
 
 export let persistor = persistStore(store);
