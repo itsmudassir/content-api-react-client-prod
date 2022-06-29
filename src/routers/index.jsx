@@ -47,10 +47,7 @@ const Routes = () => {
           <Route path={"/signup"} component={PageSignUp} />
           <Route path={"/forgot-pass"} component={PageForgotPass} />
           <PrivateRoute path={"/dashboard"} component={PageDashboard} />
-          {/* <Route path={"/search"} component={PageSearch} /> */}
-          {/* <Route path={"/search-v2"} component={PageSearchV2} /> */}
           <PrivateRoute path={"/discover/dicover_insights"} component={Analytics} />
-          {/* <Route path={"/:id"} component={SingleCard} /> */}
           <PrivateRoute path={path+"/topics"} component={TopicsPage} />
         </Switch>
         <Footer />
