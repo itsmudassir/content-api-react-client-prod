@@ -13,7 +13,7 @@ const Card11 = ({
   hiddenAuthor = false,
   ratio = "aspect-w-4 aspect-h-3",
 }) => {
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { id } = cardvalue;
   const history = useHistory();
   const cardvalues = cardvalue.fields;
@@ -29,7 +29,7 @@ const Card11 = ({
   const setPostToRedux = (e) => {
     try {
       e.preventDefault();
-      // dispatch(addpost({ ...cardvalue.fields, id, isLiked: true }));
+      dispatch(addpost({ ...cardvalue.fields, id, isLiked: true }));
     } catch (err) {
       console.log(err);
     }
