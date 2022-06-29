@@ -13,7 +13,7 @@ const postsSlice = createSlice({
             state.post = selectedPost;
         },
         removePost: (state, action)=>{
-            state.post= null;
+            state.post= {};
         }
     }
 

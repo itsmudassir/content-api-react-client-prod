@@ -15,6 +15,7 @@ const rootReducers = {
   commentLikes: commentLikesReducer,
   pages: pagesReducer,
   mediaRunning: mediaRunningReducer,
+  // posts: postsReducer,
 
 
 };
