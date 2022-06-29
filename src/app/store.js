@@ -31,7 +31,7 @@ const middlewareLogger = !!isDev ? logger : [];
 
 export const store = configureStore({
     reducer: {
-        posts:postsReducer,
+        // posts:postsReducer,
         [contentApi.reducerPath]: contentApi.reducer,
         persistedReducer
     },
