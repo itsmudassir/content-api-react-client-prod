@@ -51,6 +51,7 @@ const PageContactUs = ({ className = "" }) => {
         headingEmoji=""
         heading="Contact us"
         className=""
+        childrenClassName="shadow-none"
       >
         <div className="">
           <p className="text-xl md:text-2xl font-normal text-center pb-16">

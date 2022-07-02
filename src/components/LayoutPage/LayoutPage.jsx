@@ -15,6 +15,7 @@ const LayoutPage = ({
   subHeading,
   headingEmoji,
   children,
+  childrenClassName=""
 }) => {
   return (
     <div
@@ -37,7 +38,7 @@ const LayoutPage = ({
 
         {/* CONTENT */}
         <div
-          className="p-5 mx-auto bg-white rounded-[40px] shadow-lg sm:p-5 dark:bg-neutral-900"
+          className={`p-5 mx-auto bg-white rounded-[40px] shadow-lg sm:p-5 dark:bg-neutral-900 ${childrenClassName}`}
         >
           {children}
         </div>

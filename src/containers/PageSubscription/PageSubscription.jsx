@@ -110,6 +110,7 @@ const PageSubscription = ({ className = "" }) => {
         headingEmoji="💎"
         heading="Subscription"
         className=""
+        childrenClassName="shadow-none"
       >
         <p className="text-xl md:text-3xl font-semibold text-center pt-10 pb-16">
           Subscription

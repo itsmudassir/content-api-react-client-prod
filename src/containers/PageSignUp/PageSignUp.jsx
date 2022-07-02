@@ -62,6 +62,7 @@ const PageSignUp = ({ className = "", history }) => {
         subHeading=""
         headingEmoji=""
         heading=""
+        childrenClassName="shadow-none"
       >
         <div className="max-w-md mx-auto space-y-6">
           <div className="grid gap-3 flex justify-center mb-12">

@@ -8,18 +8,15 @@ const ExcludeDomainInputField = ({ getSelectedvalve }) => {
   return (
     <div>
       <ReactiveBase
-        app="content_system_v3"
-        //   url="http://localhost:7777"
-        url="http://localhost:5001/graphql"
+        // app="content_system_v3"
+        // url="http://localhost:5001/graphql"
+        app="content_system_prod"
+        url="https://contentgizmo-searchbox.herokuapp.com"
       >
         <DataSearch
           className="datasearch"
           dataField={["title"]}
           autosuggest={true}
-          defaultSuggestions={[
-            { label: "Songwriting", value: "Songwriting" },
-            { label: "Musicians", value: "Musicians" },
-          ]}
           highlight={true}
           showClear={true}
           componentId="searchbox"

@@ -2,25 +2,22 @@ import React, { useState } from "react";
 import "./limitDomains.css";
 import { ReactiveBase, DataSearch } from "@appbaseio/reactivesearch";
 
-const LimitDomainsInputField = ({getSelectedvalve}) => {
+const LimitDomainsInputField = ({ getSelectedvalve }) => {
   const [input, Setinput] = useState("");
-
 
   return (
     <div>
       <ReactiveBase
-        app="content_system_v3"
+        // app="content_system_v3"
         //   url="http://localhost:7777"
-        url="http://localhost:5001/graphql"
+        // url="http://localhost:5001/graphql"
+        app="content_system_prod"
+        url="https://contentgizmo-searchbox.herokuapp.com"
       >
         <DataSearch
           className="datasearch"
           dataField={["title"]}
           autosuggest={true}
-          defaultSuggestions={[
-            { label: "Songwriting", value: "Songwriting" },
-            { label: "Musicians", value: "Musicians" },
-          ]}
           highlight={true}
           showClear={true}
           componentId="searchbox"
@@ -38,7 +35,7 @@ const LimitDomainsInputField = ({getSelectedvalve}) => {
             index: "good-books-ds",
           }}
           // iconPosition="le"
-        //   filterLabel="search"
+          //   filterLabel="search"
           loading={true}
           innerClass={{
             input: "searchbox",
@@ -59,13 +56,10 @@ const LimitDomainsInputField = ({getSelectedvalve}) => {
           placeholder="Enter domains to see results from only these sites... e.g cnn.com, bbc.com"
           onValueSelected={function (value, cause, source) {
             getSelectedvalve(value);
-           }}
+          }}
           value={input}
           onChange={(value, triggerQuery, event) => {
-            Setinput(
-              value,
-              () => triggerQuery()
-            );
+            Setinput(value, () => triggerQuery());
           }}
         />
       </ReactiveBase>
