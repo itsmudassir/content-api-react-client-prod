@@ -55,10 +55,8 @@ const Card12 = ({
           </span>
         </h2>
 
-        <div className="flex items-end justify-between mt-auto">
+        <div className="flex items-end justify-center mt-auto">
           <PostCardLikeAndComment className="relative" postData={cardItems} />
-
-          <PostCardSaveAction className="relative" postData={cardItems} />
         </div>
       </div>
     </div>

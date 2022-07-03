@@ -10,7 +10,7 @@ const PostCardCommentBtn = ({
 
   return (
     <button
-      className={`nc-PostCardLikeAction relative min-w-[68px] flex items-center rounded-full leading-none group transition-colors ${className}`}
+      className={`nc-PostCardLikeAction relative min-w-[50px] flex items-center rounded-full leading-none group transition-colors ${className}`}
       title="Facebook_shares"
       data-nc-id="PostCardLikeAction"
     >

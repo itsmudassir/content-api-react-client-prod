@@ -2,6 +2,8 @@ import React from "react";
 import PostCardCommentBtn from "../../components/PostCardCommentBtn/PostCardCommentBtn";
 import PostCardLikeContainer from "../../containers/PostCardLikeContainer/PostCardLikeContainer";
 import PostCardAddtoFavouritesFolderBtn from "../PostCardAddtoFavouritesFolderBtn/PostCardAddtoFavouritesFolderBtn";
+import PopoverShareBtn from "../PopoverShareBtn/PopoverShareBtn";
+
 
 const PostCardLikeAndComment = ({
   className = "",
@@ -22,31 +24,31 @@ const PostCardLikeAndComment = ({
   return (
     <div
       // space-x-2
-      className={`nc-PostCardLikeAndComment w-full px-2 flex justify-between items-center   ${className}`}
+      className={`nc-PostCardLikeAndComment w-full px-2 flex justify-between items-center ${className}`}
       data-nc-id="PostCardLikeAndComment"
     >
-     
-        <PostCardLikeContainer
-          className={itemClass}
-          twitter_shares={twitter_shares}
-          topic_twitter={twitter}
-          onClickLike={onClickLike}
-          // postId={id}
-          />
-      
+      <PostCardLikeContainer
+        className={itemClass}
+        twitter_shares={twitter_shares}
+        topic_twitter={twitter}
+        onClickLike={onClickLike}
+        // postId={id}
+      />
 
       <div className="">
-      <PostCardCommentBtn
-        href={href}
-        facebook_shares={facebook_shares}
-        topic_facebook={facebook}
+        <PostCardCommentBtn
+          href={href}
+          facebook_shares={facebook_shares}
+          topic_facebook={facebook}
         />
-        </div>
+      </div>
 
       <PostCardAddtoFavouritesFolderBtn
         postData={postData}
         setPostToRedux={setPostToRedux}
       />
+
+      <PopoverShareBtn  postData={postData}/>
     </div>
   );
 };

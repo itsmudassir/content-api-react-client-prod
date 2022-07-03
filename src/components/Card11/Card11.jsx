@@ -73,11 +73,11 @@ const Card11 = ({
           </span>
         </h2>
         <div className="flex items-end justify-center mt-auto">
-            <PostCardLikeAndComment
-              className="relative"
-              setPostToRedux={setPostToRedux}
-              postData={cardvalue}
-            />
+          <PostCardLikeAndComment
+            className="relative"
+            setPostToRedux={setPostToRedux}
+            postData={cardvalue}
+          />
         </div>
       </div>
     </div>
