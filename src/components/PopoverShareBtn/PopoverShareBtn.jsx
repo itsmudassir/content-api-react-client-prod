@@ -1,6 +1,6 @@
 import Popover from "@idui/react-popover";
 import { ShareIcon } from "@heroicons/react/outline";
-import styles from "./popover.module.css";
+import "./popover.css";
 import {
   FacebookShareButton,
   TwitterShareButton,
@@ -17,7 +17,7 @@ const PopoverShareBtn = ({ postData }) => {
         trigger="click"
         withArrow={false}
         guessBetterPosition={true}
-        className={styles.popover}
+        className="popover"
         content={
           <div className="flex justify-center items-center space-x-4 h-14 w-52">
             <FacebookShareButton url={url} title={title}>
