@@ -11,34 +11,31 @@ const pricings = [
     name: "Starter",
     pricing: "$5",
     per: "/mo",
-    features: ["Automated Reporting", "Faster Processing", "Customizations"],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+    features: ["Article Search", "Article Sharing", "Follow Curated Topics"]
   },
   {
     isPopular: true,
     name: "Basic",
-    pricing: "$15",
+    pricing: "$10",
     per: "/mo",
     features: [
       "Everything in Starter",
-      "100 Builds",
-      "Progress Reports",
-      "Premium Support",
-    ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+      "Make Custom Topic",
+      "Insights for Curated Topics",
+      "Chat Support",
+    ]
   },
   {
     isPopular: false,
     name: "Plus",
-    pricing: "$25",
+    pricing: "$15",
     per: "/mo",
     features: [
       "Everything in Basic",
-      "Unlimited Builds",
+      "Insights for any search term",
       "Advanced Analytics",
-      "Company Evaluations",
-    ],
-    desc: ` Literally you probably haven't heard of them jean shorts.`,
+      "Premium Support",
+    ]
   },
 ];
 
@@ -85,11 +82,11 @@ const PageSubscription = ({ className = "" }) => {
         <div className="flex flex-col mt-auto">
           {pricing.isPopular ? (
             <ButtonPrimary onClick={() => history.push(`register`)}>
-              Submit
+              Start your free trial
             </ButtonPrimary>
           ) : (
-            <ButtonSecondary>
-              <span className="font-medium">Submit</span>
+            <ButtonSecondary onClick={() => history.push(`register`)}>
+              <span className="font-medium">Start your free trial</span>
             </ButtonSecondary>
           )}
           <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-3">
@@ -113,7 +110,7 @@ const PageSubscription = ({ className = "" }) => {
         childrenClassName="shadow-none"
       >
         <p className="text-xl md:text-3xl font-semibold text-center pt-10 pb-16">
-          Subscription
+          Pricing
         </p>
         <section className="text-neutral-600 text-sm md:text-base overflow-hidden">
           <div className="grid lg:grid-cols-3 gap-5 xl:gap-8">

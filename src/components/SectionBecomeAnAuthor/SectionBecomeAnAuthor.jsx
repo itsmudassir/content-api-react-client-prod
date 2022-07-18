@@ -19,16 +19,14 @@ const SectionBecomeAnAuthor = ({ className = "", rightImg = rightImgDemo }) => {
             className="w-10 h-10 text-white p-2 bg-black rounded-full"
             style={{ transform: "scaleX(-1)" }}
           />
-          <p> Discover Trending Content</p>
+          <p>Find Top Content</p>
         </span>
         <h2 className="font-semibold text-3xl sm:text-4xl mt-3">
-          Find and share the best content on social media
+          Discover best content for your social media
         </h2>
         <span className="block mt-8 text-neutral-500 dark:text-neutral-400">
-          Become an industry leader by searching for high-quality content from
-          the Web, Twitter, and YouTube and sharing it on your social channels.
-          Moreover, search for influencers who matter and analyze their KPIs.
-        </span>
+          Be on top of the game by searching and sharing the top-notch content from
+          a collection of over 1 million most visited sources on the web.        </span>
         <ButtonPrimary
           onClick={() => history.push(`register`)}
           className="mt-8"
@@ -36,7 +34,7 @@ const SectionBecomeAnAuthor = ({ className = "", rightImg = rightImgDemo }) => {
           Start your free trial
         </ButtonPrimary>
         <div className="flex items-center space-x-3 mt-12 ml-2">
-          <p className="font-bold text-sm">Integrated with</p>
+          <p className="font-bold text-sm">Integrations</p>
           <i className="lab la-facebook-f text-lg text-white bg-blue-600 p-2 rounded-full" />
           <i className="lab la-twitter text-lg text-white bg-blue-500 p-2 rounded-full" />
           <i className="lab la-linkedin-in text-lg text-white bg-blue-700 p-2 rounded-full" />

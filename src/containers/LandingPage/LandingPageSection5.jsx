@@ -21,17 +21,16 @@ const LandingPageSection5 = ({ className = "", rightImg = section5Image }) => {
               className="w-10 h-10 text-white p-2 bg-black rounded-full"
               style={{ transform: "scaleX(-1)" }}
             />
-            <p>Content Insights</p>
+            <p>Insights</p>
           </span>
           <h2 className="font-semibold text-3xl sm:text-4xl mt-3">
-            Get the complete picture of a topic’s performance w.r.t its total
-            engagement
+            Insights metrics help you measure topics performance with respect to its social media engagement
           </h2>
-          <span className="block mt-8 text-neutral-500 dark:text-neutral-400">
+          {/* <span className="block mt-8 text-neutral-500 dark:text-neutral-400">
             Create your personal library of top content sources and access
             relevant articles as they get published. Discover, read, and share
             the best content
-          </span>
+          </span> */}
         </div>
 
         <div className="flex-grow">
@@ -42,26 +41,26 @@ const LandingPageSection5 = ({ className = "", rightImg = section5Image }) => {
       {/* cards div */}
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-7 mt-12 w-full">
         <SimpleCard
-          title="Topic Overview"
-          desc="Get the complete picture of a topic’s performance w.r.t its total engagement."
+          title="Overview"
+          desc="Get several performance metrics of topics with respect to social engagement"
           image={topicOverview}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
           title="Top Domains"
-          desc="See top domains that regularly publish great content on a particular topic and add them."
+          desc="discover which domains publish the most about your specific topic or niche"
           image={topDomains}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
           title="Top Authors"
-          desc="Identify the best authors who produce the best content in your niche."
+          desc="Recognise the best authors that write the most about your topic"
           image={topAuthors}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
-          title="Content KPIs"
-          desc="Assess metrics such as word count, reading levels, popular publishing days to fine tune your content strategy."
+          title="Other Metrics"
+          desc="Explore performance measures such as popular days to publish, word count, and reading dificulty"
           image={contentKPIs}
           className="md:h-96 lg:h-56"
         />

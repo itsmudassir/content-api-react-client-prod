@@ -24,12 +24,12 @@ const LandingPageSection3 = ({ className = "", rightImg = section3Image }) => {
             <p>Search</p>
           </span>
           <h2 className="font-semibold text-3xl sm:text-4xl mt-3">
-            Search, curate, and share top content in your Industry
+            Search content with in your niche and share it on your social channels
           </h2>
           <span className="block mt-8 text-neutral-500 dark:text-neutral-400">
-            Search content by keywords to get results that people have liked and
-            shared. Understand what’s working with topic insights revealing true
-            statistics.
+            Our Keyword search enables you to find the hot content that people have shared.
+            With topic insights you can get all stats of what topic works and what doesnt.
+           
           </span>
         </div>
 
@@ -41,26 +41,30 @@ const LandingPageSection3 = ({ className = "", rightImg = section3Image }) => {
       {/* cards div */}
       <div className="flex flex-col md:flex-row space-x-0 md:space-x-7 mt-12 w-full">
         <SimpleCard
-          title="360 Degree Search"
-          desc="Search for articles from the web, videos on YouTube, and what's trending on Twitter from one single platform"
+          title="Search Everywhere"
+          desc="Search for all kinds of articles  
+          from the web,
+           and see what's trending on Facebook and Twitter from one 
+           place 
+           "
           image={three60Image}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
-          title="Broaden Your Search Horizon"
-          desc="Search for articles from the web, videos on YouTube, and trending on Twitter from one platform."
+          title="Powerful Sorting"
+          desc="Sort content by freshness, social media engagement and length"
           image={search}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
-          title="Powerful Filters"
-          desc="Filter search results by engagement across socials, time periods, regions, and language to get targeted content."
+          title="Useful Filters"
+          desc="Get relevant content by filtering search results by Author, Lenguage, Region, Date"
           image={filter}
           className="md:h-96 lg:h-56"
         />
         <SimpleCard
-          title="Content Insights"
-          desc="Get a wide array of analytics about how a particular topic is performing and stay informed about what to publish"
+          title="Insights"
+          desc="Measure any topics performance from the analytics provided by the insights feature "
           image={insights}
           className="md:h-96 lg:h-56"
         />

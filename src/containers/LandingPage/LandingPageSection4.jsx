@@ -30,14 +30,10 @@ const LandingPageSection4 = ({ className = "", rightImg = section4Image }) => {
             <p>Topics</p>
           </span>
           <h2 className="font-semibold text-3xl sm:text-4xl mt-3">
-            Collect and organize your content stream into curated or custom
-            topics for easy access.{" "}
+            Group content into custom topics or follow existing curated topics to access it all in one place.{" "}
           </h2>
           <span className="block mt-8 text-neutral-500 dark:text-neutral-400">
-            Create topics and folders for your discovered content. Instantly
-            access trending content against your topics, trending news, and a
-            quotations library. Visit your saved RSS feeds every day for new
-            articles.
+            Single place to access your grouped custom topics, followed topics and you can also add any article to favorite.
           </span>
 
           {/* cards div */}
@@ -45,13 +41,13 @@ const LandingPageSection4 = ({ className = "", rightImg = section4Image }) => {
             <div className="flex flex-col lg:flex-row">
               <SimpleCard
                 title="Curated topics"
-                desc="Follow popular topics of interest from pre-created categories to populate your content feed automatically."
+                desc="Built-in content categories can be followed and accessed in topics area"
                 image={curated}
                 className="border-0"
               />
               <SimpleCard
                 title="Custom Topics"
-                desc="Build your own topic by filtering content based upon keywords, domains, engagement, region, and date published."
+                desc="Make your own categories using filters, search terms and sorts"
                 image={customTopics}
                 className="border-0"
               />
@@ -59,17 +55,17 @@ const LandingPageSection4 = ({ className = "", rightImg = section4Image }) => {
 
             <div className="flex flex-col lg:flex-row">
               <SimpleCard
-                title="Cover Stories"
-                desc="Get a quick overview of the five most trending articles from each of your curated topics."
+                title="Favorites"
+                desc="Make multiple folders to organize/store any articles that you like" 
                 image={coverStories}
                 className="border-0"
               />
-              <SimpleCard
+              {/* <SimpleCard
                 title="Quotes"
                 desc="Search and share inspirational quotations on all topics with your audience"
                 image={quotes}
                 className="border-0"
-              />
+              /> */}
             </div>
           </div>
         </div>
