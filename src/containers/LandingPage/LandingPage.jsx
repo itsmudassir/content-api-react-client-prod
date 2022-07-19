@@ -5,10 +5,15 @@ import LandingPageSection3 from "./LandingPageSection3";
 import LandingPageSection4 from "./LandingPageSection4";
 import LandingPageSection5 from "./LandingPageSection5";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
+
 
 const LandingPage = () => {
   return (
     <>
+    <Helmet>
+        <title>Contentgizmo</title>
+      </Helmet>
       <div className="container ">
         {/* === SECTION 1 === */}
         <div className="relative py-16">

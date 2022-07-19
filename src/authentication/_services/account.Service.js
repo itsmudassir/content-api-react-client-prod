@@ -30,26 +30,36 @@ function login(email, password) {
         .then(user => {
             // publish user to subscribers and start timer to refresh token
             userSubject.next(user);
+            localStorage.setItem('refresh-token', JSON.stringify(user.refreshToken));
+
             startRefreshTokenTimer();
             return user;
         });
 }
 
 function logout() {
+    let refreshtoken=JSON.parse(localStorage.getItem('refresh-token'))
+
     // revoke token, stop refresh timer, publish null to user subscribers and redirect to login page
-    fetchWrapper.post(`${baseUrl}/revoke-token`, {});
+    fetchWrapper.post(`${baseUrl}/revoke-token`, {refreshtoken});
     stopRefreshTokenTimer();
     userSubject.next(null);
+    localStorage.clear();
+
     history.push('/account/login');
 }
 
 function refreshToken() {
-    return fetchWrapper.post(`${baseUrl}/refresh-token`, {})
+    let refreshtoken=JSON.parse(localStorage.getItem('refresh-token'))
+    return fetchWrapper.post(`${baseUrl}/refresh-token`, {refreshtoken})
         .then(user => {
             // publish user to subscribers and start timer to refresh token
+            localStorage.setItem('refresh-token', JSON.stringify(user.refreshToken));
+
             userSubject.next(user);
             startRefreshTokenTimer();
             return user;
+            
         });
 }
 

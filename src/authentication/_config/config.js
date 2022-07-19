@@ -1,5 +1,5 @@
 export const config = {
     // apiUrl: 'http://localhost:7777'
-    apiUrl: 'https://contentgizmo.herokuapp.com'
+    apiUrl: 'https://content-api-prod.vercel.app'
 }
 

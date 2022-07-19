@@ -44,7 +44,8 @@ const skClient = new SearchkitClient({
 });
 
 // attempt silent token refresh before startup
-accountService.refreshToken().finally(startApp);
+  accountService.refreshToken().finally(startApp);
+
 
 // ReactDOM.render(
 //   <React.StrictMode>
