@@ -3,7 +3,7 @@ import { accountService } from '../../authentication/_services/account.Service';
 
 
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'https://contentgizmo.herokuapp.com',
+    baseUrl: 'https://content-api-prod.vercel.app',
     prepareHeaders: (headers, { getState }) => {
         const user = accountService.userValue;
         const token = user.jwtToken;
